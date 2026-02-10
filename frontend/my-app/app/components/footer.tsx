@@ -7,9 +7,9 @@ const footer = () => {
         <p>© 2026 A R LUXURY MANAGEMENT INC. ALL RIGHTS RESERVED</p>
 
         <div className='flex gap-4 text-purple-600 text-2xl'>
-            <Link className="link" href="/About">PRIVACY POLICY</Link>
-            <Link className="link" href="/Expertise">TERMS AND CONDITIONS</Link>
-            <Link className="link" href="/Network">CAREERS</Link>
+            <Link className="link" href="/privacy-policy">PRIVACY POLICY</Link>
+            <Link className="link" href="/terms-and-conditions">TERMS AND CONDITIONS</Link>
+            <Link className="link" href="/careers">CAREERS</Link>
         </div>
     </div>
   )

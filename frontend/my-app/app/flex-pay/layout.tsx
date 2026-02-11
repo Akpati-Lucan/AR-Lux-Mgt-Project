@@ -1,20 +1,19 @@
-import FlexPayNavBar from "./FlexPayNavBar";
+import React, { ReactNode } from 'react'
+import FlexPayNavBar from './FlexPayNavBar';
 
+interface Props {
+    children: ReactNode;
+}
 
-export default function FlexPayLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const FlexPayLayout = ({ children }: Props) => {
   return (
-    <div className="flex min-h-screen">
-      {/* Sidebar */}
-       <FlexPayNavBar />
-
-      {/* Content */}
-      <main className="flex-1 p-8">
-        {children}
-      </main>
+    <div className='flex'>
+        <aside>
+            <FlexPayNavBar />
+        </aside>
+        <div>{children}</div>
     </div>
   )
 }
+
+export default FlexPayLayout

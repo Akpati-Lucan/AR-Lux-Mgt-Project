@@ -1,13 +1,18 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
 
 const Header = () => {
   return (
     <>
-    <div className='p-2 h-20 bg-white flex items-center justify-between'>
-        <Link href="/">AR Logo</Link>
+    <div className='h-20 bg-gray-900 flex gap-4 items-center justify-between'>
+        <div className="bg-purple-100 p-2">
+          <Link href="/">
+            <Image src={"/AR-lux-mgmt-logo.png"} alt="AR Logo" width={120} height={40} priority />
+          </Link>
+        </div>
 
-        <div className='flex gap-4 text-purple-600 text-2xl'>
+        <div className='flex gap-4 text-purple-400 text-lg p-4'>
             <Link href="/about">About</Link>
             <Link href="/expertise">Expertise</Link>
             <Link href="/network">Network</Link>
@@ -16,7 +21,7 @@ const Header = () => {
             <Link href="/signin">Sign In</Link>
         </div>
     </div>
-    <div className='h-1 bg-purple-600 flex'></div>
+    <div className='h-1.5 bg-purple-600 flex'></div>
     </>
   )
 }

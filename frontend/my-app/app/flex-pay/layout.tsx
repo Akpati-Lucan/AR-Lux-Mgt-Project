@@ -11,7 +11,7 @@ const FlexPayLayout = ({ children }: Props) => {
         <aside>
             <FlexPayNavBar />
         </aside>
-        <div>{children}</div>
+        <div className='p-5'>{children}</div>
     </div>
   )
 }

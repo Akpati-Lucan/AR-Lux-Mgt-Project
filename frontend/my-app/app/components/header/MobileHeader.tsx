@@ -19,9 +19,9 @@ const MobileHeader: React.FC = () => {
   const closeSidebar = () => setIsSidebarOpen(false);
   return (
     <>
-    <div className='h-20 bg-gray-900 flex gap-4 items-center justify-between'>
+    <div className='h-21 bg-gray-900 flex gap-4 items-center justify-between'>
         {/* Logo */}
-        <div className="bg-purple-100 p-2 h-20">
+        <div className="bg-gradient-to-r from-purple-200 via-purple-100 to-white p-2  h-21">
           <Link href="/">
             <Image src={"/AR-lux-mgmt-logo.png"} alt="AR Logo" width={120} height={40} priority />
           </Link>
@@ -30,7 +30,7 @@ const MobileHeader: React.FC = () => {
       {/* Mobile menu button */}
       <button
         onClick={toggleSidebar}
-        className="p-2 rounded-full bg-gray-800 text-purple-400 hover:bg-gray-700"
+        className="p-2 bg-gray-800 text-purple-400 hover:bg-gray-700 mr-4 rounded-md"
       >
         &#9776; {/* Hamburger icon */}
       </button>
@@ -55,13 +55,13 @@ const MobileHeader: React.FC = () => {
       >
         {/* Close button */}
         <div className="flex justify-between items-center p-4 border-b border-gray-700">
-          <div className="bg-purple-100 p-2 h-20">
+          <div className="bg-gradient-to-r from-purple-200 via-purple-100 to-white p-2 rounded-md h-17">
             <Link href="/">
-              <Image src={"/AR-lux-mgmt-logo.png"} alt="AR Logo" width={120} height={40} priority />
+              <Image src={"/AR-lux-mgmt-logo.png"} alt="AR Logo" width={90} height={30} priority />
             </Link>
           </div>
           <button onClick={closeSidebar}
-            className="p-2 rounded-full bg-gray-800 text-purple-400 hover:bg-gray-700 text-2xl">
+            className="p-1 bg-gray-800 text-purple-400 hover:bg-gray-700 text-2xl rounded-md pb-2">
             &times;
           </button>
         </div>

@@ -5,8 +5,8 @@ import React from 'react'
 const Header = () => {
   return (
     <>
-    <div className='h-20 bg-gray-900 flex gap-4 items-center justify-between'>
-        <div className="bg-purple-100 p-2">
+    <div className='h-21 bg-gray-900 flex gap-4 items-center justify-between'>
+        <div className="bg-gradient-to-r from-purple-200 via-purple-100 to-white p-2  h-21">
           <Link href="/">
             <Image src={"/AR-lux-mgmt-logo.png"} alt="AR Logo" width={120} height={40} priority />
           </Link>

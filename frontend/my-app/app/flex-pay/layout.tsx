@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import FlexPayNavBar from './FlexPayNavBar';
+import FlexPayNavBar from './FlexPayNavBar/FlexPayNavBar';
 
 interface Props {
     children: ReactNode;

@@ -1,9 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import logo from "./flex-pay-logo.png"
 
-const MobileFlexPayNavBar = () => {
-
-  const links = [
+const links = [
   { href: "/flex-pay/flex-pay-direct", label: "Flex Pay Direct" },
   { href: "/flex-pay/flex-pay-banking", label: "Flex Pay Banking" },
   { href: "/flex-pay/flex-pay-synergy", label: "Flex Pay Synergy" },
@@ -17,18 +16,28 @@ const MobileFlexPayNavBar = () => {
   { href: "/flex-pay/signin", label: "Sign In" },
 ];
 
+const MobileFlexPayNavBar = () => {
   return (
-      <div className={` w-34 bg-gray-900`}>
-      <nav className="flex flex-col gap-3 text-purple-400 text-base p-3">
-        {links.map((link) => (
-          <Link
-            key={link.href + link.label} // unique key
-            href={link.href}
-            className="hover:text-white" >
-            {link.label}
+      <div className='h-screen w-34 bg-gray-900 flex flex-col gap-3 p-2'>
+
+        {/* Logo */}
+        <div className="bg-linear-to-r from-purple-200 via-purple-100 to-white 
+                          w-30 h-20 flex items-center justify-center">
+          <Link href="/flex-pay">
+            <Image src={logo} alt="Flex Pay Logo" width={90} height={30} priority />
           </Link>
-        ))}
-      </nav>
+        </div>
+        
+        <nav className="flex flex-col gap-3 text-purple-400 text-base p-3">
+          {links.map((link) => (
+            <Link
+              key={link.href + link.label} // unique key
+              href={link.href}
+              className="hover:text-white" >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
       </div>
   );
 };

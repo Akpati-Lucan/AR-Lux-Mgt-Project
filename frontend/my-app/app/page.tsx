@@ -1,9 +1,16 @@
-import Image from "next/image";
+"use client";
+import DesktopHomePage from "./home/DesktopHomePage";
+import MobileHomePage from "./home/MobileHomePage";
+import ResponsiveRender from "./components/ResponsiveRender";
 
-export default function Home() {
-  return (
-    <main>
-      <p>Home Page</p>
-    </main>
+const HomePage = () => {
+   return (
+    <ResponsiveRender
+      desktop={<DesktopHomePage />}
+      mobile={<MobileHomePage />}
+      breakpoint={760} 
+    />
   );
-}
+};
+
+export default HomePage;

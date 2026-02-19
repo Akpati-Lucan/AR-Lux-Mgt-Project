@@ -75,7 +75,7 @@ const AboutSlideShow = () => {
   const slide = slides[current]
 
   return (
-    <section className="relative w-full h-[600px] overflow-hidden bg-black text-white">
+    <section className="relative w-full h-150 overflow-hidden bg-black text-white">
 
       {/* Background Image */}
       <Image

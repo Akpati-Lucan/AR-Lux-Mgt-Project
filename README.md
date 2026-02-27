@@ -39,7 +39,7 @@ RESTful API design
 ### Database
 
 ```
-SQL-based database (update with your actual DB choice)
+SQL-based database 
 ```
 
 ---
@@ -62,8 +62,6 @@ root/
 * **Frontend** handles UI and API communication.
 * **Backend** manages authentication, routing, and business logic.
 * **Database** handles data persistence and schema design.
-
-This structure improves scalability and team productivity.
 
 ---
 
@@ -95,7 +93,7 @@ http://localhost:3000
 ```
 cd backend
 npm install
-npm run dev
+npm run dev ( No Backend for now )
 ```
 
 Ensure the backend server is running before testing API routes.

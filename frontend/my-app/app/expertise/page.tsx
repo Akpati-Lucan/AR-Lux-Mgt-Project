@@ -1,9 +1,16 @@
-import React from 'react'
+"use client";
+import DesktopExpertisePage from "./DesktopExpertisePage";
+import MobileExpertisePage from "./MobileExpertisePage";
+import ResponsiveRender from "../components/ResponsiveRender";
 
-const Expertise = () => {
-  return (
-    <div>Expertise</div>
-  )
-}
+const ExpertisePage = () => {
+   return (
+    <ResponsiveRender
+      desktop={<DesktopExpertisePage />}
+      mobile={<MobileExpertisePage />}
+      breakpoint={760} 
+    />
+  );
+};
 
-export default Expertise
+export default ExpertisePage;

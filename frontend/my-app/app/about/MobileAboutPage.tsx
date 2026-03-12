@@ -92,7 +92,7 @@ const About = () => {
 
                 {/* Background Image */}
                 <Image
-                src="/about-buildings.jpg"
+                src="/about/about-buildings.jpg"
                 alt="Luxury brand background"
                 fill
                 className="object-cover brightness-50"

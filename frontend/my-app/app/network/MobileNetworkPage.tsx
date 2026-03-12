@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 import { cards } from "./cards"
 
-const DesktopExpertisePage = () => {
+const MobileNetworkPage = () => {
   return (
     <div className="w-full flex flex-col">
 
@@ -11,44 +11,31 @@ const DesktopExpertisePage = () => {
         <section className="relative w-full h-105 flex items-center justify-center text-center">
 
             <Image
-            src="/expertise/expertise-buildings.jpg"
-            alt="Expertise background"
+            src="/network/magazine.jpg"
+            alt="Network background"
             fill
-            className="object-cover brightness-50"
+            className="object-cover brightness-60"
             priority
             />
 
             <div className="relative z-10 max-w-4xl px-6 text-white">
                 <h1 className="text-4xl md:text-5xl font-semibold tracking-wide mb-6">
-                    OUR EXPERTISE
+                    OUR NETWORK
                 </h1>
-
                 <p className="text-lg text-gray-200 leading-relaxed">
-                    At A R Luxury Management, we redefine excellence through strategic
-                    vision, cultural influence, and disruptive innovation. Our
-                    multidisciplinary approach elevates brands and talent across
-                    fashion, entertainment, retail, arts, fintech, green energy,
-                    health, and wellness.
+                    A R Luxury Management (ARLM) operates through six specialized suites, each designed to help brands harness culture, innovation, and global influence to create high-impact products and programs.
+                    We've built a curated, agile ecosystem of top-tier professionals, connected via our proprietary digital platform. 
+                    This model ensures lean, efficient collaboration project by project while upholding our commitment to transparency, equity, and cultural responsibility.
+                    More than a network, we're a dynamic collective where luxury meets adaptability, and where every partnership is engineered for measurable, meaningful success.
                 </p>
             </div>
         </section>
 
+      {/* ---------- Network CARDS ---------- */}
 
-        {/* ---------- INTRO TEXT SECTION ---------- */}
-        <section className="max-w-6xl mx-auto px-6 py-16 text-center">
-            <p className="text-gray-600 text-lg leading-relaxed">
-            We don't just manage; we curate, connect, and catalyze. By leveraging
-            our unparalleled network of industry leaders, creators, and pioneers,
-            we craft bespoke strategies that shape markets, forge meaningful
-            partnerships, and deliver unforgettable experiences.
-            </p>
-        </section>
+      <section className="max-w-7xl px-6 py-20">
 
-      {/* ---------- EXPERTISE CARDS ---------- */}
-
-      <section className="max-w-10xl px-6 pb-20">
-
-        <div className="grid grid-cols-2 gap-8">
+        <div className=" flex flex-col gap-4">
 
             {cards.map((card, index) => (
                 <div key={index} className="relative h-60 rounded-xl overflow-hidden">
@@ -73,11 +60,10 @@ const DesktopExpertisePage = () => {
                 ))}
 
         </div>
-
       </section>
 
     </div>
   )
 }
 
-export default DesktopExpertisePage
+export default MobileNetworkPage

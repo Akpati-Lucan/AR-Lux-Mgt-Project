@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import styles from "./BackgroundCollage.module.css"
 
 const images = [
-  "/home-slideshow-1.jpg",
-  "/home-slideshow-2.jpg",
-  "/home-slideshow-3.jpg",
+  "/home/home-slideshow-1.jpg",
+  "/home/home-slideshow-2.jpg",
+  "/home/home-slideshow-3.jpg",
 ];
 
 

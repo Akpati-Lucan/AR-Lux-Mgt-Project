@@ -1,9 +1,16 @@
-import React from 'react'
+"use client";
+import DesktopExpertisePage from "./DesktopNetworkPage";
+import MobileExpertisePage from "./MobileNetworkPage";
+import ResponsiveRender from "../components/ResponsiveRender";
 
-const Network = () => {
-  return (
-    <div>Network</div>
-  )
-}
+const NetworkPage = () => {
+   return (
+    <ResponsiveRender
+      desktop={<DesktopExpertisePage />}
+      mobile={<MobileExpertisePage />}
+      breakpoint={760} 
+    />
+  );
+};
 
-export default Network
+export default NetworkPage;

@@ -11,7 +11,7 @@ const MobileExpertisePage = () => {
         <section className="relative w-full h-105 flex items-center justify-center text-center">
 
             <Image
-            src="/expertise-buildings.jpg"
+            src="/expertise/expertise-buildings.jpg"
             alt="Expertise background"
             fill
             className="object-cover brightness-50"

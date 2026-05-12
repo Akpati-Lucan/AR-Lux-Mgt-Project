@@ -1,9 +1,16 @@
-import React from 'react'
+"use client";
+import DesktopPrivacyPolicyPage from "./DesktopPrivacyPolicyPage";
+import MobilePrivacyPolicyPage from "./MobilePrivacyPolicyPage";
+import ResponsiveRender from "../components/ResponsiveRender";
 
-const PrivacyPolicy = () => {
-  return (
-    <div>PrivacyPolicy</div>
-  )
-}
+const PrivacyPolicyPage = () => {
+   return (
+    <ResponsiveRender
+      desktop={<DesktopPrivacyPolicyPage />}
+      mobile={<MobilePrivacyPolicyPage />}
+      breakpoint={760} 
+    />
+  );
+};
 
-export default PrivacyPolicy
+export default PrivacyPolicyPage;

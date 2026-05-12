@@ -1,13 +1,13 @@
 "use client";
-import DesktopExpertisePage from "./DesktopNetworkPage";
-import MobileExpertisePage from "./MobileNetworkPage";
+import DesktopNetworkPage from "./DesktopNetworkPage";
+import MobileNetworkPage from "./MobileNetworkPage";
 import ResponsiveRender from "../components/ResponsiveRender";
 
 const NetworkPage = () => {
    return (
     <ResponsiveRender
-      desktop={<DesktopExpertisePage />}
-      mobile={<MobileExpertisePage />}
+      desktop={<DesktopNetworkPage />}
+      mobile={<MobileNetworkPage />}
       breakpoint={760} 
     />
   );

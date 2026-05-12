@@ -1,9 +1,16 @@
-import React from 'react'
+"use client";
+import DesktopContactPage from "./DesktopContactPage";
+import MobileContactPage from "./MobileContactPage";
+import ResponsiveRender from "../components/ResponsiveRender";
 
-const Contact = () => {
-  return (
-    <div>Contact</div>
-  )
-}
+const ContactPage = () => {
+   return (
+    <ResponsiveRender
+      desktop={<DesktopContactPage />}
+      mobile={<MobileContactPage />}
+      breakpoint={760} 
+    />
+  );
+};
 
-export default Contact
+export default ContactPage;

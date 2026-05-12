@@ -1,9 +1,16 @@
-import React from 'react'
+"use client";
+import DesktopTermsAndConditionsPage from "./DesktopTermsAndConditionsPage";
+import MobileTermsAndConditionsPage from "./MobileTermsAndConditionPage";
+import ResponsiveRender from "../components/ResponsiveRender";
 
-const TermsAndConditions = () => {
-  return (
-    <div>TermsAndConditions</div>
-  )
-}
+const TermsAndConditionsPage = () => {
+   return (
+    <ResponsiveRender
+      desktop={<DesktopTermsAndConditionsPage />}
+      mobile={<MobileTermsAndConditionsPage />}
+      breakpoint={760} 
+    />
+  );
+};
 
-export default TermsAndConditions
+export default TermsAndConditionsPage;

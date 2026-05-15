@@ -8,72 +8,115 @@ const MobileExpertisePage = () => {
 
       {/* ---------- HERO SECTION ---------- */}
 
-        <section className="relative w-full h-105 flex items-center justify-center text-center">
+        <section className="w-full mx-auto px-6 py-12 text-center">
 
-            <Image
-            src="/expertise/expertise-buildings.jpg"
-            alt="Expertise background"
-            fill
-            className="object-cover brightness-50"
-            priority
-            />
+            {/* Section Heading */}
+            <h1 className="text-2xl font-light tracking-wide mb-4">
+                OUR EXPERTISE
+            </h1>
 
-            <div className="relative z-10 max-w-4xl px-6 text-white">
-                <h1 className="text-4xl md:text-5xl font-semibold tracking-wide mb-6">
-                    OUR EXPERTISE
-                </h1>
+            {/* Subheading */}
+            <p className="max-w-2xl mx-auto uppercase tracking-[0.3em] text-sm mb-8">
+                Redefining excellence through strategy, culture, and innovation.
+            </p>
 
-                <p className="text-lg text-gray-200 leading-relaxed">
-                    At A R Luxury Management, we redefine excellence through strategic
-                    vision, cultural influence, and disruptive innovation. Our
-                    multidisciplinary approach elevates brands and talent across
-                    fashion, entertainment, retail, arts, fintech, green energy,
-                    health, and wellness.
+            {/* Divider Line */}
+            <div className="w-16 h-px bg-black mx-auto mb-8"></div>
+
+            <div className="max-w-2xl mx-auto text-center">
+
+                <p className="text-xl leading-loose text-neutral-700 font-light tracking-wide">
+                At AR Luxury Management (ARLM), we redefine excellence through strategic
+                vision, cultural influence, and forward-thinking innovation that empowers
+                brands and talent to shape the future of modern luxury.
+                </p>
+
+                <p className="mt-4 text-xl leading-loose text-neutral-700 font-light tracking-wide">
+                We don't just manage; we curate, connect, and catalyze. By leveraging
+                our unparalleled network of industry leaders, creators, and pioneers,
+                we craft bespoke strategies that shape markets, forge meaningful
+                partnerships, and deliver unforgettable experiences.
                 </p>
             </div>
         </section>
 
-
-        {/* ---------- INTRO TEXT SECTION ---------- */}
-        <section className="max-w-6xl mx-auto px-6 py-16 text-center">
-            <p className="text-gray-600 text-lg leading-relaxed">
-            We don't just manage; we curate, connect, and catalyze. By leveraging
-            our unparalleled network of industry leaders, creators, and pioneers,
-            we craft bespoke strategies that shape markets, forge meaningful
-            partnerships, and deliver unforgettable experiences.
-            </p>
-        </section>
+      {/* ---------- EXPERTISE CARDS ---------- */}
 
       {/* ---------- EXPERTISE CARDS ---------- */}
 
-      <section className="max-w-7xl px-6 pb-20">
+<section className="max-w-7xl mx-auto px-6 pb-20">
 
-        <div className=" flex flex-col gap-4">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            {cards.map((card, index) => (
-                <div key={index} className="relative h-60 rounded-xl overflow-hidden">
-                    <Image
-                    src={card.background}
-                    alt={card.title}
-                    fill
-                    className="object-cover brightness-50"
-                    />
+    {cards.map((card, index) => (
+      <div
+        key={index}
+        className={
+          `
+          group
+          relative
+          bg-gray-900
+          border border-gray-800
+          rounded-3xl
+          p-8
+          transition-all duration-500
+          hover:-translate-y-1
+          hover:shadow-2xl
+          hover:border-gray-700
+          overflow-hidden
+        `
+        }
+      >
 
-                    <div className="absolute bottom-0 p-6 text-white">
-                        <h3 className="text-xl font-semibold mb-3">
-                            {card.title}
-                        </h3>
+        {/* Gradient Accent */}
+        <div className="
+          absolute top-0 left-0 w-full h-1
+          bg-linear-to-r from-black via-gray-400 to-gray-200
+        " />
 
-                        <p className="text-sm text-gray-200 leading-relaxed">
-                            {card.about}
-                        </p>
-                    </div>
-
-                </div>
-                ))}
-
+        {/* Number */}
+        <div className="text-sm tracking-[0.3em] text-gray-400 mb-6">
+          0{index + 1}
         </div>
-      </section>
+
+        {/* Title */}
+        <h3 className="
+          text-2xl
+          font-light
+          tracking-wide
+          text-white
+          mb-4
+        ">
+          {card.title}
+        </h3>
+
+        {/* Description */}
+        <p className="
+          text-gray-300
+          leading-loose
+          text-base
+          font-light
+        ">
+          {card.about}
+        </p>
+
+        {/* Hover Circle */}
+        <div className="
+          absolute -bottom-10 -right-10
+          w-32 h-32
+          rounded-full
+          bg-gray-800
+          opacity-0
+          group-hover:opacity-100
+          transition duration-500
+        " />
+
+      </div>
+    ))}
+
+  </div>
+
+</section>
 
     </div>
   )

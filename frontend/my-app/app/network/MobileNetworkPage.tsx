@@ -8,26 +8,50 @@ const MobileNetworkPage = () => {
 
       {/* ---------- HERO SECTION ---------- */}
 
-        <section className="relative w-full h-105 flex items-center justify-center text-center">
+        <section className="w-full mx-auto px-6 py-12 text-center">
 
-            <Image
-            src="/network/magazine.jpg"
-            alt="Network background"
-            fill
-            className="object-cover brightness-60"
-            priority
-            />
+            {/* Section Heading */}
+            <h1 className="text-2xl font-light tracking-wide mb-4">
+                OUR NETWORK
+            </h1>
 
-            <div className="relative z-10 max-w-4xl px-6 text-white">
-                <h1 className="text-4xl md:text-5xl font-semibold tracking-wide mb-6">
-                    OUR NETWORK
-                </h1>
-                <p className="text-lg text-gray-200 leading-relaxed">
-                    A R Luxury Management (ARLM) operates through six specialized suites, each designed to help brands harness culture, innovation, and global influence to create high-impact products and programs.
-                    We've built a curated, agile ecosystem of top-tier professionals, connected via our proprietary digital platform. 
-                    This model ensures lean, efficient collaboration project by project while upholding our commitment to transparency, equity, and cultural responsibility.
-                    More than a network, we're a dynamic collective where luxury meets adaptability, and where every partnership is engineered for measurable, meaningful success.
+            {/* Subheading */}
+            <p className="max-w-2xl mx-auto uppercase tracking-[0.3em] text-sm mb-8">
+                Where innovation, culture, and global influence connect.
+            </p>
+
+            {/* Divider Line */}
+            <div className="w-16 h-px bg-black mx-auto mb-8"></div>
+
+            <div className="max-w-2xl mx-auto text-center">
+
+                <p className="text-xl leading-loose text-neutral-700 font-light tracking-wide">
+                AR Luxury Management (ARLM) operates through six specialized suites,
+                each strategically designed to help brands harness culture, innovation,
+                and global influence to create high-impact products, experiences,
+                and transformative programs.
                 </p>
+
+                <p className="mt-4 text-xl leading-loose text-neutral-700 font-light tracking-wide">
+                Our curated ecosystem connects top-tier professionals across fashion,
+                entertainment, media, wellness, technology, finance, and creative
+                strategy through a proprietary digital platform built for seamless
+                global collaboration.
+                </p>
+
+                <p className="mt-4 text-xl leading-loose text-neutral-700 font-light tracking-wide">
+                By embracing an agile and project-driven structure, we deliver lean,
+                efficient partnerships while maintaining our commitment to transparency,
+                equity, sustainability, and cultural responsibility.
+                </p>
+
+                <p className="mt-4 text-xl leading-loose text-neutral-700 font-light tracking-wide">
+                More than a traditional network, ARLM is a dynamic collective where
+                luxury meets adaptability empowering visionary brands and talent to
+                build meaningful influence, sustainable growth, and measurable success
+                on a global scale.
+                </p>
+
             </div>
         </section>
 
@@ -38,25 +62,69 @@ const MobileNetworkPage = () => {
         <div className=" flex flex-col gap-4">
 
             {cards.map((card, index) => (
-                <div key={index} className="relative h-60 rounded-xl overflow-hidden">
-                    <Image
-                    src={card.background}
-                    alt={card.title}
-                    fill
-                    className="object-cover brightness-50"
-                    />
-
-                    <div className="absolute bottom-0 p-6 text-white">
-                        <h3 className="text-xl font-semibold mb-3">
-                            {card.title}
-                        </h3>
-
-                        <p className="text-sm text-gray-200 leading-relaxed">
-                            {card.about}
-                        </p>
+                  <div
+                    key={index}
+                    className={
+                      `
+                      group
+                      relative
+                      bg-gray-900
+                      border border-gray-800
+                      rounded-3xl
+                      p-8
+                      transition-all duration-500
+                      hover:-translate-y-1
+                      hover:shadow-2xl
+                      hover:border-gray-700
+                      overflow-hidden
+                    `
+                    }
+                  >
+            
+                    {/* Gradient Accent */}
+                    <div className="
+                      absolute top-0 left-0 w-full h-1
+                      bg-linear-to-r from-black via-gray-400 to-gray-200
+                    " />
+            
+                    {/* Number */}
+                    <div className="text-sm tracking-[0.3em] text-gray-400 mb-6">
+                      0{index + 1}
                     </div>
-
-                </div>
+            
+                    {/* Title */}
+                    <h3 className="
+                      text-2xl
+                      font-light
+                      tracking-wide
+                      text-white
+                      mb-4
+                    ">
+                      {card.title}
+                    </h3>
+            
+                    {/* Description */}
+                    <p className="
+                      text-gray-300
+                      leading-loose
+                      text-base
+                      font-light
+                    ">
+                      {card.about}
+                    </p>
+            
+                    {/* Hover Circle */}
+                    <div className="
+                      absolute -bottom-10 -right-10
+                      w-32 h-32
+                      rounded-full
+                      bg-gray-800
+                      opacity-0
+                      group-hover:opacity-100
+                      transition duration-500
+                    " />
+            
+                  </div>
                 ))}
 
         </div>

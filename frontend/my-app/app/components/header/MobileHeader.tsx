@@ -21,7 +21,7 @@ const MobileHeader: React.FC = () => {
     <>
       <div className='h-21 bg-gray-900 flex gap-4 items-center justify-between'>
         {/* Logo */}
-        <div className="bg-linear-to-r from-purple-200 via-purple-100 to-white p-2  h-21">
+        <div className="bg-linear-to-r from-gray-400 via-gray-200 to-white p-2  h-21">
           <Link href="/">
             <Image src={"/AR-lux-mgmt-logo.png"} alt="AR Logo" width={120} height={40} priority />
           </Link>
@@ -29,7 +29,7 @@ const MobileHeader: React.FC = () => {
         
         {/* Mobile menu button */}
         <button onClick={toggleSidebar}
-          className="p-2 bg-gray-800 text-purple-400 hover:bg-gray-700 mr-4 rounded-md">
+          className="p-2 bg-gray-800 text-gray-400 hover:bg-gray-700 mr-4 rounded-md">
           &#9776; {/* Hamburger icon */}
         </button>
 
@@ -45,18 +45,18 @@ const MobileHeader: React.FC = () => {
             
             {/* Close button */}
             <div className="flex justify-between items-center p-4 border-b border-gray-700">
-              <div className="bg-linear-to-r from-purple-200 via-purple-100 to-white p-2 rounded-md h-17">
+              <div className="bg-linear-to-r from-gray-400 via-gray-200 to-white p-2 rounded-md h-17">
                 <Link href="/">
                   <Image src={"/AR-lux-mgmt-logo.png"} alt="AR Logo" width={90} height={30} priority />
                 </Link>
               </div>
               <button onClick={closeSidebar}
-                className="p-1 bg-gray-800 text-purple-400 hover:bg-gray-700 text-2xl rounded-md pb-2">
+                className="p-1 bg-gray-800 text-gray-400 hover:bg-gray-700 text-2xl rounded-md pb-2">
                 &times;  {/* X icon */}
               </button>
             </div>
               
-            <nav className="flex flex-col gap-4 text-purple-400 text-lg p-4">
+            <nav className="flex flex-col gap-4 text-gray-400 text-lg p-4">
               {links.map((link) => (
                 <Link
                   key={link.href}
@@ -71,7 +71,7 @@ const MobileHeader: React.FC = () => {
         </div>
       
         {/* Divider */}
-        <div className='h-1.5 bg-purple-600 flex'></div>
+        <div className='h-1.5 bg-gray-950 flex'></div>
     </>
   );
 };

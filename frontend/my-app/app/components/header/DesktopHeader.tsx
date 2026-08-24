@@ -18,7 +18,6 @@ const Header = () => {
             <Link href="/expertise" className="hover:text-white">Expertise</Link>
             <Link href="/network" className="hover:text-white">Network</Link>
             <Link href="/contact" className="hover:text-white">Contact</Link>
-            <Link href="/flex-pay" className="hover:text-white">Flex Pay</Link>
             <Link href="/signin" className="hover:text-white">Sign In</Link>
         </div>
       </div>

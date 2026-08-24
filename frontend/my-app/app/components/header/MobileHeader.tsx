@@ -11,7 +11,6 @@ const MobileHeader: React.FC = () => {
     { href: "/expertise", label: "Expertise" },
     { href: "/network", label: "Network" },
     { href: "/contact", label: "Contact" },
-    { href: "/flex-pay", label: "Flex Pay" },
     { href: "/signin", label: "Sign In" },
   ];
 
